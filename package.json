@@ -1,0 +1,23 @@
+{
+  "name": "url-shortening-api-landing-page",
+  "version": "1.0.0",
+  "description": "Integrate with the shrtcode URL shortening API and utilises with browser storage in this landing page to shorten API's.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/src.css -o ./public/style.css --watch "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usernameisleye/URL-shortening-API-landing-page.git"
+  },
+  "author": "Adesida Leye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usernameisleye/URL-shortening-API-landing-page/issues"
+  },
+  "homepage": "https://github.com/usernameisleye/URL-shortening-API-landing-page#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
