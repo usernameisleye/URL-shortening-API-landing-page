@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {},
     fontFamily: {
@@ -9,16 +9,17 @@ module.exports = {
     colors: {
       //Primary
       'Cyan': 'hsl(180, 66%, 49%)',
-      'Dark Violet': 'hsl(257, 27%, 26%)',
+      'Dark-Violet': 'hsl(257, 27%, 26%)',
 
       //Secondary
       'Red': 'hsl(0, 87%, 67%)',
 
       //Neutral
+      'White': 'hsl(0, 0%, 100%)',
       'Gray': 'hsl(0, 0%, 75%)',
-      'Grayish Violet': 'hsl(257, 7%, 63%)',
-      'Very Dark Blue': 'hsl(255, 11%, 22%)',
-      'Very Dark Violet': 'hsl(260, 8%, 14%)',
+      'Grayish-Violet': 'hsl(257, 7%, 63%)',
+      'Very-Dark-Blue': 'hsl(255, 11%, 22%)',
+      'Very-Dark-Violet': 'hsl(260, 8%, 14%)',
     }
   },
   plugins: [],
