@@ -6,136 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortening API</title>
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="./public/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/d39106e7f3.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-body">
-    <header class="flex flex-col ">
-        <nav class="flex justify-between my-8 mx-20">
+    <header class="flex flex-col">
+        <nav class="flex justify-between my-8 sm:mx-20 mx-8">
             <div class="flex justify-center items-center gap-4">
                 <img src="./images/logo.svg" alt="Shortly Logo">
-                <ul class="flex gap-4 font-medium cursor-pointer">
+                <ul class="hidden sm:flex gap-6 font-medium cursor-pointer">
                     <li class="opacity-70 hover:opacity-100">Features</li>
                     <li class="opacity-70 hover:opacity-100">Pricing</li>
                     <li class="opacity-70 hover:opacity-100">Resources</li>
                 </ul>
             </div>
 
-            <div class="flex gap-2 font-medium">
+            <div class="hidden sm:flex gap-4 font-medium">
                 <button class="opacity-70 hover:opacity-100">Log In</button>
                 <button class="bg-Cyan py-2 px-4 rounded-3xl text-White hover:bg-opacity-70">Sign Up</button>
             </div>
         </nav>
 
-        <section class="flex ml-20 gap-4 my-16">
-            <div class="flex flex-col items-start gap-4">
+        <section class="flex sm:flex-row flex-col-reverse items-center sm:ml-20 ml-4 gap-4 sm:my-16 sm:mr-0 mr-4 sm:mb-32 mb-32">
+            <div class="flex flex-col sm:items-start items-center gap-4 sm:text-start text-center">
                 <h1 class="text-5xl font-bold">More than just shorter links</h1>
-                <p class="opacity-60 break-all">Build your brand's recognition and get detailed <br> insights on how your links are performing</p>
+                <p class="opacity-60 break-all">Build your brand's recognition and get detailed insights on how your links are performing</p>
                 <button class="bg-Cyan py-4 px-10 rounded-full font-medium text-White hover:bg-opacity-70">Get Started</button>
             </div>
 
             <div class="">
-                <img src="./images/illustration-working.svg" alt="Cartoon figure working on a desktop">
+                <img src="./images/illustration-working.svg" alt="Cartoon figure working on a desktop" class="w-full">
             </div>
         </section>
     </header>
 
-    <main class="">
-        <section class="shortening flex flex-col items-center gap-8">
+    <main class="bg-Gray">
+        <section class="shortening flex flex-col items-center gap-6 -translate-y-1/4">
             <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-32 w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
-                <div class="flex justify-center items-center gap-2 h-full">
-                    <input class="w-1/2 h-12 p-4 border-none outline-none rounded-md" type="text" placeholder="Shorten a link here...">
+                <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-full px-4">
+                    <input class="link-input sm:w-1/2 w-full h-12 p-4 border-none outline-none rounded-md" type="text" placeholder="Shorten a link here...">
     
-                    <button class="bg-Cyan h-12 px-8 rounded-md font-medium text-White hover:brightness-105">Shorten It!</button>
+                    <button class="link-btn bg-Cyan h-12 sm:px-8 w-full sm:w-fit rounded-md font-medium text-White hover:brightness-105">Shorten It!</button>
                 </div>
             </div>
 
             <div class="shortened-links flex flex-col gap-4 w-3/4">
-                <div class="shortened-link flex justify-between">
-                    <span>https://www.frontendmentor.io</span>
+                <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md">
+                    <span class="sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
 
-                    <div class="">
-                        <span>https://rel.ink/k4Kyk</span>
-                        <button class="copyBtn">Copy</button>
+                    <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
+                        <span class="text-Cyan"><a href="">https://rel.ink/k4Kyk</a></span>
+                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105">Copy</button>
+                    </div>
+                </div>
+
+                <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md">
+                    <span class="sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
+
+                    <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
+                        <span class="text-Cyan"><a href="">https://rel.ink/k4Kyk</a></span>
+                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105">Copy</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="">
-            <div class="">
-                <h2>Advanced Statistics</h2>
-                <span>Track how your links are performing across the web with our advanced statistics dashboard</span>
+        <section class="flex flex-col items-center">
+            <div class="flex gap-4 flex-col items-center">
+                <h2 class="text-3xl font-extrabold">Advanced Statistics</h2>
+                <span class="text-center opacity-70">Track how your links are performing across the web with <br> our advanced statistics dashboard</span>
             </div>
 
-            <div class="">
-                <div class=""></div>
-                <article class="">
-                    <div class=""><img src="./images/icon-brand-recognition.svg" alt="Chart svg"></div>
-                    <p>Brand Recognition</p>
+            <div class="flex sm:flex-row flex-col items-start gap-8 relative my-16 sm:mx-20 mx-10">
+                <div class="absolute bg-Cyan sm:w-full w-2 sm:h-2 h-full sm:top-1/2 top-0 sm:left-0 left-1/2"></div>
+                <article class="bg-White z-10 py-6 px-8 rounded-lg sm:h-fit w-full">
+                    <div class="bg-Dark-Violet w-max p-4 rounded-full -translate-y-3/4 translate-x-full sm:translate-x-0"><img src="./images/icon-brand-recognition.svg" alt="Chart svg"></div>
+                    <p class="text-lg font-bold">Brand Recognition</p>
                     <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
                 </article>
 
-                <article class="">
-                    <div class=""><img src="./images/icon-detailed-records.svg" alt="Candle svg"></div>
-                    <p>Detailed Records</p>
+                <article class="bg-White z-10 py-6 px-8 rounded-lg mt-10">
+                    <div class="bg-Dark-Violet w-max p-4 rounded-full -translate-y-3/4 translate-x-full sm:translate-x-0"><img src="./images/icon-detailed-records.svg" alt="Candle svg"></div>
+                    <p class="text-lg font-bold">Detailed Records</p>
                     <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
                 </article>
 
-                <article class="">
-                    <div class=""><img src="./images/icon-fully-customizable.svg" alt="Paint brushes svg"></div>
-                    <p>Fully Customizable</p>
+                <article class="bg-White z-10 py-6 px-8 rounded-lg mt-20">
+                    <div class="bg-Dark-Violet w-max p-4 rounded-full -translate-y-3/4 translate-x-full sm:translate-x-0"><img src="./images/icon-fully-customizable.svg" alt="Paint brushes svg"></div>
+                    <p class="text-lg font-bold">Fully Customizable</p>
                     <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                 </article>
             </div>
         </section>
 
-        <section class="">
-            <span>Boost your links today</span>
-            <button>Get Started</button>
+        <section style="background-image: url(./images/bg-shorten-desktop.svg);" class="flex flex-col gap-6 items-center mt-10  py-12 sm:px-0 px-2 bg-Dark-Violet bg-no-repeat bg-cover">
+            <span class="text-3xl font-extrabold text-White">Boost your links today</span>
+            <button class="bg-Cyan h-12 px-8 rounded-full font-bold text-White hover:brightness-105">Get Started</button>
         </section>
     </main>
 
-    <footer class="">
-        <div class="">
-            <img src="./images/logo.svg" alt="Shortly Logo">
+    <footer class="bg-Very-Dark-Violet text-White flex sm:flex-row flex-col py-16 px-24 sm:gap-0 gap-4">
+        <div class="sm:w-1/3 w-full sm:block flex sm:justify-start justify-center sm:mb-0 mb-4">
+            <img src="./images/logo.svg" alt="Shortly Logo" class="contrast-0">
         </div>
 
-        <div class="">
-            <p>Features</p>
-
-            <ul>
-                <li>Link Shortening</li>
-                <li>Branded Links</li>
-                <li>Analytics</li>
-            </ul>
+        <div class="flex sm:flex-row flex-col sm:items-start items-center sm:text-start text-center gap-10 sm:w-1/3 w-full">
+            <div class="">
+                <p class="font-bold mb-4">Features</p>
+    
+                <ul class="flex flex-col gap-2">
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Link Shortening</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Branded Links</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Analytics</li>
+                </ul>
+            </div>
+    
+            <div class="">
+                <p class="font-bold mb-4">Resources</p>
+    
+                <ul class="flex flex-col gap-2">
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Blog</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Developers</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Support</li>
+                </ul>
+            </div>
+    
+            <div class="">
+                <p class="font-bold mb-4">Company</p>
+    
+                <ul class="flex flex-col gap-2">
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">About</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Our Team</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Careers</li>
+                    <li class="opacity-60 hover:opacity-100 cursor-pointer">Contact</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="">
-            <p>Resources</p>
-
-            <ul>
-                <li>Blog</li>
-                <li>Developers</li>
-                <li>Support</li>
-            </ul>
-        </div>
-
-        <div class="">
-            <p>Company</p>
-
-            <ul>
-                <li>About</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Contact</li>
-            </ul>
-        </div>
         
-        <div class="">
-            <img src="./images/icon-facebook.svg" alt="Facebook Logo">
-            <img src="./images/icon-twitter.svg" alt="Twitter Logo">
-            <img src="./images/icon-pinterest.svg" alt="Pinterest Logo">
+        <div class="flex sm:items-start justify-center items-center gap-3 sm:w-1/3 w-full text-3xl">
+            <i class="fa-brands fa-facebook cursor-pointer hover:text-Cyan"></i>
+            <i class="fa-brands fa-twitter cursor-pointer hover:text-Cyan"></i>
+            <i class="fa-brands fa-pinterest cursor-pointer hover:text-Cyan"></i>
+            <i class="fa-brands fa-square-instagram cursor-pointer hover:text-Cyan"></i>
         </div>
     </footer>
 </body>
