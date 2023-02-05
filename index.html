@@ -44,25 +44,25 @@
 
     <main class="bg-Gray">
         <section class="shortening flex flex-col items-center gap-6 -translate-y-1/4">
-            <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-32 w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
-                <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-full px-4">
-                    <div class="link-div flex flex-col sm:w-1/2 w-full">
-                        <input class="link-input w-full h-12 p-4 border-none  outline-none rounded-md border-Red border-2" type="text" placeholder="Shorten a link here...">
-                        <!-- <span>Hello</span> -->
+            <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-auto sm:h-32 w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
+                <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-auto sm:h-full px-4 py-4">
+                    <div class="link-div flex flex-col sm:w-1/2 w-full sm:py-4">
+                        <input class="link-input w-full h-12 p-4   outline-none rounded-md " type="text" placeholder="Shorten a link here...">
+                        <span class="text-sm italic text-Red"></span>
                     </div>
     
-                    <button class="link-btn bg-Cyan h-12 sm:px-8 w-full sm:w-fit rounded-md font-medium text-White hover:brightness-105 my-auto">Shorten It!</button>
+                    <button class="link-btn bg-Cyan h-12 sm:px-8 w-full sm:w-fit rounded-md font-medium text-White hover:brightness-105 my-auto outline-none">Shorten It!</button>
 
                 </div>
             </div>
 
             <div class="shortened-links flex flex-col gap-4 w-3/4">
                 <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md">
-                    <span class="sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
+                    <span class="original-link sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
 
                     <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
-                        <span class="text-Cyan"><a href="">https://rel.ink/k4Kyk</a></span>
-                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105">Copy</button>
+                        <span class="text-Cyan short-link cursor-pointer">https://rel.ink/k4Kyk</span>
+                        <button class="copy-btn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
 
                     <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
                         <span class="text-Cyan"><a href="">https://rel.ink/k4Kyk</a></span>
-                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105">Copy</button>
+                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
                     </div>
                 </div>
             </div>
