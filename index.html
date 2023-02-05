@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortening API</title>
+    <title>Shortly</title>
     <link rel="stylesheet" href="./public/style.css">
     <link rel="icon" href="./images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -23,9 +23,10 @@
                 </ul>
             </div>
 
-            <div class="hidden sm:flex gap-4 font-medium">
-                <button class="opacity-70 hover:opacity-100">Log In</button>
-                <button class="bg-Cyan py-2 px-4 rounded-3xl text-White hover:bg-opacity-70">Sign Up</button>
+            <div class="sm:flex gap-4 font-medium">
+                <img class="w-6 sm:hidden block opacity-70" src="./images/bars-solid.svg" alt="Menu bar">
+                <button class="hidden opacity-70 hover:opacity-100">Log In</button>
+                <button class="hidden bg-Cyan py-2 px-4 rounded-3xl text-White hover:bg-opacity-70">Sign Up</button>
             </div>
         </nav>
 
@@ -43,7 +44,7 @@
     </header>
 
     <main class="bg-Gray">
-        <section class="shortening flex flex-col items-center gap-6 -translate-y-1/4">
+        <section class="shortening flex flex-col items-center gap-6 -translate-y-2/4">
             <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-auto sm:h-32 w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
                 <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-auto sm:h-full px-4 py-4">
                     <div class="link-div flex flex-col sm:w-1/2 w-full sm:py-4">
@@ -52,30 +53,12 @@
                     </div>
     
                     <button class="link-btn bg-Cyan h-12 sm:px-8 w-full sm:w-fit rounded-md font-medium text-White hover:brightness-105 my-auto outline-none">Shorten It!</button>
-
                 </div>
             </div>
 
-            <div class="shortened-links flex flex-col gap-4 w-3/4">
-                <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md">
-                    <span class="original-link sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
-
-                    <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
-                        <span class="text-Cyan short-link cursor-pointer">https://rel.ink/k4Kyk</span>
-                        <button class="copy-btn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
-                    </div>
-                </div>
-
-                <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md">
-                    <span class="sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center">https://www.frontendmentor.io</span>
-
-                    <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
-                        <span class="text-Cyan"><a href="">https://rel.ink/k4Kyk</a></span>
-                        <button class="copyBtn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
-                    </div>
-                </div>
-            </div>
         </section>
+
+        <section class="shortened-links flex flex-col items-center gap-4 mb-20 -translate-y-12"></section>
 
         <section class="flex flex-col items-center">
             <div class="flex gap-4 flex-col items-center">
@@ -84,7 +67,7 @@
             </div>
 
             <div class="flex sm:flex-row flex-col items-start gap-8 relative my-16 sm:mx-20 mx-10">
-                <div class="absolute bg-Cyan sm:w-full w-2 sm:h-2 h-full sm:top-1/2 top-0 sm:left-0 left-1/2"></div>
+                <div class="absolute bg-Cyan sm:w-full w-2 sm:h-2 h-full sm:top-1/2 top-0 sm:left-0 left-1/2 sm:translate-x-0 translate-x-1/2"></div>
                 <article class="bg-White z-10 py-6 px-8 rounded-lg sm:h-fit w-full">
                     <div class="bg-Dark-Violet w-max p-4 rounded-full -translate-y-3/4 translate-x-full sm:translate-x-0"><img src="./images/icon-brand-recognition.svg" alt="Chart svg"></div>
                     <p class="text-lg font-bold">Brand Recognition</p>
