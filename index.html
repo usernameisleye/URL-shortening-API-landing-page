@@ -13,21 +13,24 @@
 </head>
 <body class="font-body">
     <header class="flex flex-col">
-        <nav class="flex justify-between my-8 sm:mx-20 mx-8">
-            <div class="flex justify-center items-center gap-4">
+        <nav class="flex justify-between my-8 sm:mx-20 mx-8 relative">
+            <div class="flex justify-center items-center mr-6">
                 <img src="./images/logo.svg" alt="Shortly Logo">
-                <ul class="hidden sm:flex gap-6 font-medium cursor-pointer">
-                    <li class="opacity-70 hover:opacity-100">Features</li>
-                    <li class="opacity-70 hover:opacity-100">Pricing</li>
-                    <li class="opacity-70 hover:opacity-100">Resources</li>
-                </ul>
             </div>
 
-            <div class="sm:flex gap-4 font-medium">
-                <img class="w-6 sm:hidden block opacity-70" src="./images/bars-solid.svg" alt="Menu bar">
-                <button class="hidden opacity-70 hover:opacity-100">Log In</button>
-                <button class="hidden bg-Cyan py-2 px-4 rounded-3xl text-White hover:bg-opacity-70">Sign Up</button>
+            <div class="sm:flex hidden sm:flex-row flex-col justify-between items-center gap-4 font-medium sm:w-11/12 sm:bg-White bg-Dark-Violet sm:text-Black text-White absolute sm:static top-full sm:top-0 w-full sm:h-auto sm:py-0 py-8 sm:rounded-none rounded-md tab">
+                <ul class="flex sm:flex-row flex-col items-center gap-6 cursor-pointer">
+                    <li class="sm:opacity-70 hover:opacity-100">Features</li>
+                    <li class="sm:opacity-70 hover:opacity-100">Pricing</li>
+                    <li class="sm:opacity-70 hover:opacity-100">Resources</li>
+                </ul>
+
+                <div class="flex sm:flex-row flex-col gap-4 sm:w-auto w-11/12 sm:border-t-0 sm:border-t-White sm:border-none border-t-2 border-t-Gray border-solid border-opacity-30">
+                    <button class="sm:block sm:opacity-70 hover:opacity-100 sm:pt-0 pt-4">Log In</button>
+                    <button class="sm:block bg-Cyan py-2 px-4 rounded-3xl text-White hover:bg-opacity-70 outline-none">Sign Up</button>
+                </div>
             </div>
+            <img class="menu w-6 sm:hidden flex opacity-70" src="./images/bars-solid.svg" alt="Menu bar">
         </nav>
 
         <section class="flex sm:flex-row flex-col-reverse items-center sm:ml-20 ml-4 gap-4 sm:my-16 sm:mr-0 mr-4 sm:mb-32 mb-32">
@@ -45,20 +48,29 @@
 
     <main class="bg-Gray">
         <section class="shortening flex flex-col items-center gap-6 -translate-y-2/4">
-            <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-auto sm:h-32 w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
-                <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-auto sm:h-full px-4 py-4">
-                    <div class="link-div flex flex-col sm:w-1/2 w-full sm:py-4">
-                        <input class="link-input w-full h-12 p-4   outline-none rounded-md " type="text" placeholder="Shorten a link here...">
-                        <span class="text-sm italic text-Red"></span>
+            <div style="background-image: url(./images/bg-shorten-desktop.svg);" class="h-auto sm:h-auto w-3/4 bg-no-repeat relative bg-Dark-Violet rounded-lg">
+                <div class="flex sm:flex-row flex-col justify-center items-center gap-2 h-auto sm:h-32 px-4 py-4">
+                    <div class="link-div sm:w-1/2 w-full sm:py-4 my-auto">
+                        <input class="link-input w-full h-12 p-4 outline-none rounded-md border-Red border-solid" type="text" placeholder="Shorten a link here...">
+                        <span class="italic text-Red"></span>
                     </div>
-    
+                    
                     <button class="link-btn bg-Cyan h-12 sm:px-8 w-full sm:w-fit rounded-md font-medium text-White hover:brightness-105 my-auto outline-none">Shorten It!</button>
                 </div>
             </div>
 
         </section>
 
-        <section class="shortened-links flex flex-col items-center gap-4 mb-20 -translate-y-12"></section>
+        <section class="shortened-links flex flex-col items-center gap-4 mb-20 -translate-y-12">
+            <!-- <div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center gap-2 p-4 rounded-md w-3/4">
+                <span class="original-link sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center break-all">${outputLink.result.original_link}</span>
+
+                <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full flex-1">
+                    <span class="short-link text-Cyan cursor-pointer">${outputLink.result.short_link}</span>
+                    <button class="copy-btn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
+                </div>
+            </div> -->
+        </section>
 
         <section class="flex flex-col items-center">
             <div class="flex gap-4 flex-col items-center">

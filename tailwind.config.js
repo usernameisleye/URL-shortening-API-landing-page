@@ -16,6 +16,7 @@ module.exports = {
 
       //Neutral
       'White': 'hsl(0, 0%, 100%)',
+      'Black': 'hsl(0, 0%, 0%)',
       'Gray': 'hsl(0, 0%, 75%)',
       'Grayish-Violet': 'hsl(257, 7%, 63%)',
       'Very-Dark-Blue': 'hsl(255, 11%, 22%)',

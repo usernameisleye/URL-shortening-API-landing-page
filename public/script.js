@@ -2,14 +2,17 @@ const linkInput = document.querySelector('.link-input');
 const shortenLinkBtn = document.querySelector('.link-btn');
 const shortendLinks = document.querySelector('.shortened-links');
 const errorMsg = document.querySelector('.link-div span');
+const menuBar = document.querySelector('.menu');
+const tabDiv = document.querySelector('.tab');
 
 shortenLinkBtn.addEventListener('click', shortenLink);
-shortendLinks.addEventListener('click', copyLink)
+shortendLinks.addEventListener('click', copyLink);
+menuBar.addEventListener('click', openTab);
 
 function shortenLink(){
     if (linkInput.value == '') {
         //if input is empty, add red border and error text
-        linkInput.classList.add('border-solid', 'border-Red', 'border-2');
+        linkInput.classList.add('border-2');
         errorMsg.textContent = 'Please add a link';
     }
     else{
@@ -18,12 +21,13 @@ function shortenLink(){
             let shortLinkDiv = '';
 
             //creating shortened link divs with API generated links, then appending to main div
-            shortLinkDiv = `<div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center p-4 rounded-md w-3/4">
-                                    <span class="original-link sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center break-all">${outputLink.result.original_link}</span>
+            shortLinkDiv =  `<div class="shortened-link bg-White flex sm:flex-row flex-col justify-between items-center gap-2 p-4 rounded-md w-3/4">
+                                <span class="original-link sm:border-none border-b-2 border-Gray border-solid w-full sm:text-start text-center break-all">${outputLink.result.original_link}</span>
 
-                                <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full">
-                                    <span class="text-Cyan short-link cursor-pointer">${outputLink.result.short_link}</span>
+                                <div class="flex sm:flex-row flex-col justify-end items-center gap-2 sm:mt-0 mt-4 w-full flex-1">
+                                    <span class="short-link text-Cyan cursor-pointer">${outputLink.result.short_link}</span>
                                     <button class="copy-btn bg-Cyan h-9 px-8 sm:w-fit w-full rounded-md font-medium text-White hover:brightness-105 outline-none">Copy</button>
+                                </div>
                             </div>`;
             shortendLinks.innerHTML += shortLinkDiv;
                           
@@ -32,18 +36,18 @@ function shortenLink(){
             errorMsg.textContent = '';
         }).catch(err =>{//creating error message if an invalid URL is inputed
             errorMsg.textContent = 'Invalid URL, Please Enter a Valid URL...';
-            linkInput.classList.add('border-solid', 'border-Red', 'border-2');
+            linkInput.classList.add('border-2');
 
             console.log(err);
         })
     }
 }
 //If Enter Key is used for shotening
-document.addEventListener('keypress', e => {
-    if(e.key = 'Enter' || e.keyCode == 13 || e.which == 13){
-        shortenLink();
-    }
-})
+// document.addEventListener('keypress', e => {
+//     if(e.key = 'Enter'){
+//         shortenLink();
+//     }
+// })
 
 function copyLink(e){
     if(e.target.classList.contains('copy-btn')){
@@ -60,4 +64,9 @@ function copyLink(e){
             copyBtn.style.backgroundColor = 'hsl(180, 66%, 49%)';
         }, 2000)
     }
+}
+
+function openTab(e){
+    tabDiv.classList.toggle('hidden');
+    tabDiv.classList.toggle('flex');
 }
